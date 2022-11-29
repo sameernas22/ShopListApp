@@ -1,10 +1,19 @@
 const initialData = {
     data : [],
+    area:[],
+    category:[],
 }
 var count = 0;
 export const addDataReducer = (state = initialData,action) => {
     switch (action.type) {
         case "ADD_DATA" :
+            if(!state.area.includes(action.area)){
+            state.area.push(action.area)
+            }
+            if(!state.category.includes(action.category)){
+            state.category.push(action.category)
+            }
+            console.log(state.area,state.category)
             action.data['key'] = count
             count++;
             return {
@@ -13,8 +22,8 @@ export const addDataReducer = (state = initialData,action) => {
                     ...state.data,
                     action.data
                 ],
-                area: action.area,
-                category: action.category,
+                area: state.area,
+                category: state.category,
 
             }
         case "DELETE_DATA" :
@@ -27,4 +36,3 @@ export const addDataReducer = (state = initialData,action) => {
         default: return state;
                 
     }
-}
