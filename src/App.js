@@ -1,22 +1,14 @@
-import logo from './logo.svg';
-import './App.css';
+import NewShop from './components/inputshop';
+import ShopList from './components/shoplist';
+import './App.css'
 
 function App() {
   return (
     <div className="App">
+      <h1>Shop List App</h1>
       <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+        <NewShop/>
+        <ShopList/>
       </header>
     </div>
   );
