@@ -28,13 +28,10 @@ body {
   max-width: 400px;
   margin: 40px auto;
   width: 100%;
-  display: none;
+  
 }
 
-label{
-  display: flex;
-    margin-bottom: 10px;
-}
+
 
 textarea,
 select,
@@ -54,6 +51,7 @@ input {
 
 
 input[type="submit"],
+input[type="button"],
 .button {
   position: relative;
   background: #ec5990;
@@ -80,8 +78,13 @@ input[type="submit"],
 }
 
 
-
-
+#cd,#cdl{
+  display: none;
+}
+label{
+  display: flex;
+    margin-bottom: 10px;
+}
 
 
 
@@ -96,13 +99,23 @@ button[type="button"] {
 }
 
 input[type="submit"]:hover,
+input[type="button"]:hover,
 button[type="button"]:hover {
   background: #bf1650;
   color: white;
 }
 
-input[type="submit"]:active {
+input[type="submit"]:active,
+input[type="button"]:active {
   transition: 0.3s all;
   top: 2px;
 }
-
+p{
+ font-size: 10px;
+ margin-top: -10px;
+ display: flex;
+ color: red;
+}
+#cdp{
+  display: none;
+}
