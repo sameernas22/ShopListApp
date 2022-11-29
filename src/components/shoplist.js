@@ -1,9 +1,78 @@
+import {useSelector,useDispatch} from "react-redux";
+import {useState} from "react";
+import {Table, Popconfirm} from 'antd';
+import {deleteData} from "../actions/action"
+export const ShopList = () =>{
+    var areas=[],categorys=[],newArea = [], newCategory = [];
+    const area =  useSelector((state)=> state.addDataReducer.area)
+    const category = useSelector((state)=> state.addDataReducer.category);
+    const data = useSelector((state)=> state.addDataReducer.data);
+    const dispatch = useDispatch();
+    console.log(data,area,category);
+    if(!areas.includes(area)){
+        let lst = {}
+        lst['text'] =  area
+        lst['value'] = area
+        newArea.push(lst);
+    }
+    if(!categorys.includes(category)){
+        let lst = {}
+        lst['text'] =  category
+        lst['value'] = category
+        newCategory.push(lst);
+    }
 
-
-export default function ShopList(){
+    const columns = [
+        {
+          title: 'Shop Name',
+          dataIndex: 'ShopName',
+          key: 'ShopName',
+        },
+        {
+          title: 'Area',
+          dataIndex: 'Area',
+          key: 'area',
+          filters:newArea,
+          onFilter: (value, record) => record.Area.includes(value),
+        },
+        {
+          title: 'Category',
+          dataIndex: 'Category',
+          key: 'category',
+          filters:newCategory,
+          onFilter: (value, record) => record.Category.includes(value),
+        },
+        {
+            title: 'Status',
+            dataIndex: 'Status',
+            key: 'status',
+            filters: [
+                {
+                  text: 'Open',
+                  value: 'Open',
+                },
+                {
+                  text: 'Close',
+                  value: 'Close',
+                },
+              ],
+              onFilter: (value, record) => record.Status.includes(value),
+        },
+        {
+            title: 'operation',
+            dataIndex: 'operation',
+            render: (_, record) =>
+              data.length >= 1 ? (
+                <Popconfirm title="Sure to delete?" onConfirm={() => dispatch(deleteData(record.key))}>
+                  <a>Delete</a>
+                </Popconfirm>
+              ) : null,
+          },
+      ];
     return(
         <>
-        <h1>Shop List Component</h1>
+        <h1>Shop List </h1>
+        <div id="table"><Table columns={columns} dataSource={data}/></div>
         </>
     )
 }
