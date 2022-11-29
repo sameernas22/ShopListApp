@@ -15,7 +15,7 @@ export default function NewShop() {
   var category = ""
   function closedate(e){
     document.getElementById("cdl").style.display = "flex";
-    
+
     document.getElementById("cd").style.display = "block";
     document.getElementById("cd").min = e.target.value;
     document.getElementById("cdp").style.display = "flex";
@@ -69,9 +69,9 @@ let currentDate = `${year}-${month}-${day}`;
         reset()
         hidclosedate()
         hidForm()
-
-    } )}>
       
+    } )}>
+     
       <input {...register("ShopName", { required: true})} pattern="[A-Za-z ]+" placeholder="Shop Name (Aphabets ONLY)" />
       {errors.ShopName && <p>Please enter shop name</p>}
       <select {...register("Area", { required: true })} onChange={(e) =>{
@@ -101,7 +101,7 @@ let currentDate = `${year}-${month}-${day}`;
         if(e.target.value === 'Other'){
           document.getElementById("othercat").style.display = 'block';
           setcatIsRequire(true);
-
+  
         }else{
           document.getElementById("othercat").style.display = 'none';
           setcatIsRequire(false);
