@@ -11,8 +11,8 @@ export default function NewShop() {
   const [data, setData] = useState("");
   const [areaisRequire, setareaIsRequire] = useState(false);
   const [catisRequire, setcatIsRequire] = useState(false);
-  var area = []
-  var category = []
+  var area = ""
+  var category = ""
   function closedate(e){
     document.getElementById("cdl").style.display = "flex";
     
