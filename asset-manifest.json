@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/ShopListApp/static/css/main.7ae1acdc.css",
+    "main.js": "/ShopListApp/static/js/main.320fbd91.js",
+    "static/js/787.771cead6.chunk.js": "/ShopListApp/static/js/787.771cead6.chunk.js",
+    "index.html": "/ShopListApp/index.html",
+    "main.7ae1acdc.css.map": "/ShopListApp/static/css/main.7ae1acdc.css.map",
+    "main.320fbd91.js.map": "/ShopListApp/static/js/main.320fbd91.js.map",
+    "787.771cead6.chunk.js.map": "/ShopListApp/static/js/787.771cead6.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.7ae1acdc.css",
+    "static/js/main.320fbd91.js"
+  ]
+}
