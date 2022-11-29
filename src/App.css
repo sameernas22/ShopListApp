@@ -3,11 +3,11 @@
 }
 
 .App-header {
-  min-height: 100vh;
+  
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: space-around;
+  justify-content: space-between;
   font-size: calc(10px + 2vmin);
   color: white;
 }
@@ -18,26 +18,42 @@ body {
     sans-serif;
   color: white;
   padding: 0 20px 50px;
+
+}
+
+#table{
+  position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+    max-width: 700px;
 }
 
 
 
+#addnew{
+  cursor: pointer;
+  background: #ec5990;
+  padding:7px 10px 10px 10px;
+  font-size:20px;
+  text-align: center;
+  border-radius: 4px;
+  transition: 0.5s ease;
+
+}
 
 
 .form {
   max-width: 400px;
   margin: 40px auto;
   width: 100%;
-  display: none;
+  display:none;
+  
 }
 
-label{
-  display: flex;
-    margin-bottom: 10px;
-}
+
 
 textarea,
-select,
+Select,
 input {
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
     "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
@@ -54,6 +70,7 @@ input {
 
 
 input[type="submit"],
+input[type="button"],
 .button {
   position: relative;
   background: #ec5990;
@@ -80,8 +97,13 @@ input[type="submit"],
 }
 
 
-
-
+#cd,#cdl{
+  display: none;
+}
+label{
+  display: flex;
+    margin-bottom: 10px;
+}
 
 
 
@@ -96,13 +118,24 @@ button[type="button"] {
 }
 
 input[type="submit"]:hover,
-button[type="button"]:hover {
+input[type="button"]:hover,
+button[type="button"]:hover,
+#addnew:hover {
   background: #bf1650;
   color: white;
 }
 
-input[type="submit"]:active {
+input[type="submit"]:active,
+input[type="button"]:active {
   transition: 0.3s all;
   top: 2px;
 }
-
+p{
+ font-size: 10px;
+ margin-top: -10px;
+ display: flex;
+ color: red;
+}
+#cdp{
+  display: none;
+}
