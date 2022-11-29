@@ -3,22 +3,22 @@ import {useState} from "react";
 import {Table, Popconfirm} from 'antd';
 import {deleteData} from "../actions/action"
 export const ShopList = () =>{
-    var areas=[],categorys=[],newArea = [], newCategory = [];
+    var newArea = [], newCategory = [];
     const area =  useSelector((state)=> state.addDataReducer.area)
     const category = useSelector((state)=> state.addDataReducer.category);
     const data = useSelector((state)=> state.addDataReducer.data);
     const dispatch = useDispatch();
-    console.log(data,area,category);
-    if(!areas.includes(area)){
+    console.log(data,newArea,newCategory);
+    for(let i in area){
         let lst = {}
-        lst['text'] =  area
-        lst['value'] = area
+        lst['text'] =  area[i]
+        lst['value'] = area[i]
         newArea.push(lst);
     }
-    if(!categorys.includes(category)){
+    for(let i in category){
         let lst = {}
-        lst['text'] =  category
-        lst['value'] = category
+        lst['text'] =  category[i]
+        lst['value'] = category[i]
         newCategory.push(lst);
     }
 

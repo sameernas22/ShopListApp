@@ -11,8 +11,8 @@ export default function NewShop() {
   const [data, setData] = useState("");
   const [areaisRequire, setareaIsRequire] = useState(false);
   const [catisRequire, setcatIsRequire] = useState(false);
-  var area = []
-  var category = []
+  var area = ""
+  var category = ""
   function closedate(e){
     document.getElementById("cdl").style.display = "flex";
     
@@ -53,16 +53,16 @@ let currentDate = `${year}-${month}-${day}`;
     <form id="form" className="form" onSubmit={handleSubmit((data) => {
         setData(JSON.stringify(data))
         if(data['Area'] === "Other"){
-          area.push(data["OtherArea"])
+          area = data["OtherArea"]
           data['Area'] = data["OtherArea"]
         }else{
-          area.push(data["Area"])
+          area = data["Area"]
         }
         if(data['Category'] === "Other"){
-          category.push(data["othercat"])
-          data['Category'] = data['othercat']
+          category = data["Othercat"]
+          data['Category'] = data['Othercat']
         }else{
-          category.push(data["Category"])
+          category = data["Category"]
         }
         data['Status'] = getstatus(data);
         dispatch(addData(data,area,category));
