@@ -36,3 +36,4 @@ export const addDataReducer = (state = initialData,action) => {
         default: return state;
                 
     }
+}
