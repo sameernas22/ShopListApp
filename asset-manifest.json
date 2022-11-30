@@ -1,15 +1,15 @@
 {
   "files": {
     "main.css": "/ShopListApp/static/css/main.cd8f2740.css",
-    "main.js": "/ShopListApp/static/js/main.5fbd49a6.js",
+    "main.js": "/ShopListApp/static/js/main.b3eb4c26.js",
     "static/js/787.771cead6.chunk.js": "/ShopListApp/static/js/787.771cead6.chunk.js",
     "index.html": "/ShopListApp/index.html",
     "main.cd8f2740.css.map": "/ShopListApp/static/css/main.cd8f2740.css.map",
-    "main.5fbd49a6.js.map": "/ShopListApp/static/js/main.5fbd49a6.js.map",
+    "main.b3eb4c26.js.map": "/ShopListApp/static/js/main.b3eb4c26.js.map",
     "787.771cead6.chunk.js.map": "/ShopListApp/static/js/787.771cead6.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.cd8f2740.css",
-    "static/js/main.5fbd49a6.js"
+    "static/js/main.b3eb4c26.js"
   ]
 }
