@@ -140,3 +140,9 @@ p{
 #cdp{
   display: none;
 }
+
+@media screen and (max-width: 472px) {
+  #table{
+    margin-left: 46px;
+  }
+}
