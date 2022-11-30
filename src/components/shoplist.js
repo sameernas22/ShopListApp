@@ -15,7 +15,7 @@ export const ShopList = () =>{
         lst['value'] = area[i]
         newArea.push(lst);
     }
-    for(let i in category){
+    if(!categorys.includes(category)){
         let lst = {}
         lst['text'] =  category[i]
         lst['value'] = category[i]

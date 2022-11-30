@@ -22,8 +22,8 @@ export const addDataReducer = (state = initialData,action) => {
                     ...state.data,
                     action.data
                 ],
-                area: state.area,
-                category: state.category,
+                area: action.area,
+                category: action.category,
 
             }
         case "DELETE_DATA" :
@@ -36,4 +36,3 @@ export const addDataReducer = (state = initialData,action) => {
         default: return state;
                 
     }
-}
