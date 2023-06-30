@@ -122,7 +122,7 @@ input[type="submit"]:hover,
 input[type="button"]:hover,
 button[type="button"]:hover,
 #addnew:hover {
-  background: #bf1650;
+  background: black;
   color: white;
 }
 
